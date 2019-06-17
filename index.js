@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 
 const router = express.Router();
@@ -10,6 +12,6 @@ const projectRoutes = require("./routers/projectRouter");
 server.use("/actions", actionRoutes);
 server.use("/projects", projectRoutes);
 
-const port = 3000;
+const port = process.env.port || 5000;
 
 server.listen(port, () => console.log(`Server running on port ${port}`));
