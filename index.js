@@ -12,6 +12,6 @@ const projectRoutes = require("./routers/projectRouter");
 server.use("/actions", actionRoutes);
 server.use("/projects", projectRoutes);
 
-const port = process.env.port || 5000;
+const port = process.env.PORT || 5000;
 
 server.listen(port, () => console.log(`Server running on port ${port}`));
